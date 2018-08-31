@@ -1,4 +1,4 @@
 ---
  - name: Playbook for new aws account
    user: name={{item}} state=present shell=/bin/bash
-   with_items: "{{new-user}}"
+   with_items: "{{ new_users }}"
