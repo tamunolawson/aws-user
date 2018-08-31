@@ -2,3 +2,7 @@
  - name: Playbook for new aws account
    user: name={{item}} state=present shell=/bin/bash
    with_items: "{{ new_user }}"
+   
+ - name: copy new hire keys
+   authorized_key: user={{item}} key="{{lookup('file', './https://github.com/tamunolawson/aws-user.git/authorized_keys.{{item}}.pub')}}"
+   with_items: "{{new_user}}"
