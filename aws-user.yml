@@ -1,0 +1,7 @@
+---
+ - name: This play is intended to create new aws user accounts
+   hosts: all
+   become: yes
+   
+   roles:
+     - create-user
