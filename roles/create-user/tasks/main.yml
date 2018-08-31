@@ -1,4 +1,4 @@
 ---
- - name: This playbook will create new aws focus user account
-   user: name="{{item}}" state=present shell=/bin/bash
+ - name: Playbook for new aws account
+   user: name={{item}} state=present shell=/bin/bash
    with_items: "{{new-user}}"
