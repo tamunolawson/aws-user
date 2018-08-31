@@ -1,8 +1,7 @@
 ---
- - name: These are variables for new aws user accounts
-   new-user:
-      - israel
-      - shash
-      - joel
-      - ariealla
-      - batia
+  new-user:
+    - israel
+    - shash
+    - joel
+    - ariealla
+    - batia
