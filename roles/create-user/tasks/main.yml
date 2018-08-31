@@ -4,5 +4,5 @@
    with_items: "{{ new_user }}"
    
  - name: copy new hire keys
-   authorized_key: user={{item}} key="{{lookup('file', './https://github.com/tamunolawson/aws-user.git/authorized_keys.{{item}}.pub')}}"
+   authorized_key: user={{item}} key="{{lookup('file', 'https://github.com/tamunolawson/aws-user.git/authorized_keys.{{item}}.pub')}}"
    with_items: "{{new_user}}"
